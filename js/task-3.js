@@ -21,7 +21,7 @@ function madeGallery() {
     
     const newMadeGallery = galleryRef
         .insertAdjacentHTML('afterbegin',
-            `<li class="gallery__item"><img class="gallery__image"></li>`);
+            `<li><img class="gallery__image"></li>`);
     
     return newMadeGallery;
 }
