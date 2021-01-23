@@ -19,12 +19,9 @@ const galleryRef = document.querySelector('#gallery');
 
 function madeGallery() {
     
-    const newMadeGallery = galleryRef
-        .insertAdjacentHTML('afterbegin',
-            `<li><img class="gallery__image"></li>`);
+galleryRef.insertAdjacentHTML('afterbegin', `<li><img class="gallery__image"></li>`);
     
-    return newMadeGallery;
-}
+};
 
 images.forEach(image => madeGallery(image));
 
