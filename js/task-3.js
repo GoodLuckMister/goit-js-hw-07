@@ -16,12 +16,11 @@ const images = [
   },
 ];
 const galleryRef = document.querySelector('#gallery');
+galleryRef.insertAdjacentHTML('beforeend', createGallery(images));
 
-function madeGallery(element) {
-  galleryRef.insertAdjacentHTML(
-    'afterbegin',
-    `<li><img class="gallery__image" src="${element.url}" alt="${element.alt}"></li>`,
-  );
+function madeGallery({ url, alt }) {
+  return `<li><img class="gallery__image" src="${url}" alt="${alt}"></li>`;
 }
-
-images.map(madeGallery);
+function createGallery(array) {
+  return array.map(madeGallery).join('');
+}
