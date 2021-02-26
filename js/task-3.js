@@ -17,19 +17,11 @@ const images = [
 ];
 const galleryRef = document.querySelector('#gallery');
 
-function madeGallery() {
-    
-galleryRef.insertAdjacentHTML('afterbegin', `<li><img class="gallery__image"></li>`);
-    
-};
+function madeGallery(element) {
+  galleryRef.insertAdjacentHTML(
+    'afterbegin',
+    `<li><img class="gallery__image" src="${element.url}" alt="${element.alt}"></li>`,
+  );
+}
 
-images.forEach(image => madeGallery(image));
-
-const getImage = document.querySelectorAll('.gallery__image');
-
-getImage.forEach((element, key) => {
-
-    element.alt = images[key].alt;
-    element.src = images[key].url;
-
-});
+images.map(madeGallery);

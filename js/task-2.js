@@ -9,13 +9,10 @@ const ingredients = [
 
 const searchNewRef = document.querySelector('#ingredients');
 
-ingredients.forEach(ingredientsItems);
-
 function ingredientsItems(element) {
   const addList = document.createElement('li');
-
   addList.textContent = element;
-    
-  searchNewRef.appendChild(addList);
 
+  searchNewRef.appendChild(addList);
 }
+ingredients.map(ingredientsItems);
