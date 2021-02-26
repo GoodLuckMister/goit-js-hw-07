@@ -12,7 +12,12 @@ const searchNewRef = document.querySelector('#ingredients');
 function ingredientsItems(element) {
   const addList = document.createElement('li');
   addList.textContent = element;
-
-  searchNewRef.appendChild(addList);
+  return addList;
 }
 ingredients.map(ingredientsItems);
+
+function renderItems(array) {
+  const ingredientsArray = array.map(ingredientsItems);
+  searchNewRef.append(...ingredientsArray);
+}
+renderItems(ingredients);
