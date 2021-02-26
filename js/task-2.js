@@ -14,7 +14,6 @@ function ingredientsItems(element) {
   addList.textContent = element;
   return addList;
 }
-ingredients.map(ingredientsItems);
 
 function renderItems(array) {
   const ingredientsArray = array.map(ingredientsItems);
