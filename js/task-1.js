@@ -1,7 +1,9 @@
 const searchElem = document.querySelectorAll('.item');
 console.log(`В списке ${searchElem.length} категории.`);
 
-searchElem.forEach(getConsole);
+const array = [...searchElem];
+
+array.forEach(getConsole);
 
 function getConsole(element) {
   const titleRefText = element.firstElementChild.textContent;
